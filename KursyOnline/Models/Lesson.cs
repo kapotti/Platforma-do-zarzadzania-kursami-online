@@ -7,8 +7,8 @@ namespace KursyOnline.Models
     {
         public int Id { get; set; }
         [Required]
-        public string Title { get; set; }
-        public string VideoUrl { get; set; } // Kreatywny detal: link do wideo
+        public string? Title { get; set; }
+        public string? VideoUrl { get; set; } 
 
         public int CourseId { get; set; }
         public virtual Course? Course { get; set; }

@@ -1,0 +1,23 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Potwierdzenie rejestracji";
+}
+
+<h1>@ViewData["Title"]</h1>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+        <p>
+            Aplikacja nie posiada obecnie skonfigurowanego serwera pocztowego. W normalnych warunkach otrzymałbyś wiadomość email z linkiem aktywacyjnym.
+            <br />
+            <a id="confirm-link" href="@Model.EmailConfirmationUrl" class="btn btn-success mt-2">Kliknij tutaj, aby potwierdzić konto (symulacja)</a>
+        </p>
+    }
+    else
+    {
+        <p>
+            Prosimy o sprawdzenie skrzynki pocztowej w celu potwierdzenia konta.
+        </p>
+    }
+}
