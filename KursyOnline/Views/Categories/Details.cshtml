@@ -1,0 +1,19 @@
+﻿@model KursyOnline.Models.Category
+
+@{
+    ViewData["Title"] = "Szczegóły Kategorii";
+}
+
+<h1>Szczegóły kategorii</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Nazwa kategorii</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edytuj</a> |
+    <a asp-action="Index" class="btn btn-secondary">Powrót do listy</a>
+</div>

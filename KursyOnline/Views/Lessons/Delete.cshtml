@@ -1,0 +1,24 @@
+﻿@model KursyOnline.Models.Lesson
+
+@{
+    ViewData["Title"] = "Usuń Lekcję";
+}
+
+<h1>Usuń lekcję</h1>
+
+<h3 class="text-danger">Czy na pewno chcesz usunąć tę lekcję?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Tytuł lekcji</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Title)</dd>
+        <dt class="col-sm-2">Kurs</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Course.Title)</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+    </form>
+</div>

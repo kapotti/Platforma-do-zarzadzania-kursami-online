@@ -1,0 +1,37 @@
+﻿@model KursyOnline.Models.Lesson
+@{
+    ViewData["Title"] = "Dodaj Lekcję";
+}
+
+<h1>Nowa lekcja</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Title" class="control-label">Tytuł lekcji</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Content" class="control-label">Treść lekcji</label>
+                <textarea asp-for="Content" class="form-control"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="VideoUrl" class="control-label">Link wideo</label>
+                <input asp-for="VideoUrl" class="form-control" />
+                <span asp-validation-for="VideoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="CourseId" class="control-label">Przypisz do kursu</label>
+                <select asp-for="CourseId" class="form-control" asp-items="ViewBag.CourseId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj lekcję" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-secondary">Powrót do listy</a>
+            </div>
+        </form>
+    </div>
+</div>

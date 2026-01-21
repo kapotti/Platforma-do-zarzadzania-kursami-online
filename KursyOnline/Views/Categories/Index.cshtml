@@ -1,0 +1,28 @@
+﻿@model IEnumerable<KursyOnline.Models.Category>
+@{
+    ViewData["Title"] = "Kategorie";
+}
+
+<h1>Lista Kategorii</h1>
+<p><a asp-action="Create" class="btn btn-primary">Dodaj nową kategorię</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nazwa kategorii</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edytuj</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Szczegóły</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
