@@ -19,7 +19,14 @@ Aplikacja posiada 4 powiązane encje:
 * **Formularze z walidacją:** System posiada 3 autorskie formularze (Kategorie, Kursy, Lekcje) z pełną walidacją po stronie serwera i klienta.
 * **Autoryzacja**
 
-### 4. Instrukcja uruchomienia
+### 4. Struktura danych
+
+1.  **Category (Kategoria):** Służy do grupowania kursów. Relacja jeden-do-wielu (1:N) z kursami.
+2.  **Course (Kurs):** Główna encja systemu zawierająca tytuł, opis, cenę oraz klucze obce.
+3.  **Lesson (Lekcja):** Szczegółowe materiały dydaktyczne (treść, URL do wideo) przypisane do konkretnego kursu (1:N).
+4.  **Użytkownicy (IdentityUser):** System ról i zabezpieczeń dostępu.
+
+### 5. Instrukcja uruchomienia
 1. Otwórz projekt w Visual Studio 2022.
 2. W **Package Manager Console** wykonaj komendę: `Update-Database`.
 3. Uruchom aplikację (F5).
