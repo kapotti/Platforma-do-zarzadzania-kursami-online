@@ -19,7 +19,7 @@ Aplikacja posiada 4 powiązane encje:
 * **Formularze z walidacją:** System posiada 3 autorskie formularze (Kategorie, Kursy, Lekcje) z pełną walidacją po stronie serwera i klienta.
 * **Autoryzacja**
 
-## 4. Przegląd Techniczny Plików
+### 4. Przegląd Techniczny Plików
 
 ### 4.1. Modele Danych (`/Models`)
 * **`Course.cs`**: Definiuje właściwości kursu oraz relacje klucza obcego do Kategorii. Zawiera atrybuty walidacyjne `[Required]` i `[Range]`.
